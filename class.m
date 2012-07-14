@@ -13,16 +13,19 @@
 
 	@end
 
+	//printing it to console (getter)
 	@implementation Fraction
 	-(void) print
 	{
 		NSLog(@"%i/%i", numerator, denominator);
 	}
+	//setter for numerator
+	//return is void - method name - parameter type - parameter name
 	-(void) setNumerator: (int) n
 	{
 		numerator = n;
 	}
-	
+	//setter for denominator
 	-(void) setDenominator: (int) d
 	{
 		denominator = d;
@@ -32,11 +35,15 @@
 int main(int argc, char const *argv[])
 {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+
+	// myFraction is the name of the instance of Fraction
 	Fraction *myFraction;
 
-	//instace of fraction and save it to obj
-
+	//instance of fraction and save it to obj
+	//allocate memory
 	myFraction= [Fraction alloc];
+	//initalize myFrac
 	myFraction = [myFraction init];
 
 	//setting values
